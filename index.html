@@ -1,0 +1,59 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const facts = [
+        {
+            fact: "Diversity",
+            description: "Insects are the most diverse group of animals on Earth, with over a million described species and potentially millions more yet to be discovered."
+        },
+        {
+            fact: "Exoskeleton",
+            description: "Insects have an exoskeleton made of chitin, which provides protection and support for their bodies."
+        },
+        {
+            fact: "Metamorphosis",
+            description: "Many insects undergo metamorphosis, a process that includes distinct life stages such as egg, larva, pupa, and adult. Butterflies are a well-known example."
+        },
+        {
+            fact: "Communication",
+            description: "Insects use various methods to communicate, including pheromones, sounds, and visual signals. For example, bees perform a 'waggle dance' to inform hive mates about the location of food sources."
+        },
+        {
+            fact: "Pollination",
+            description: "Insects like bees, butterflies, and beetles play a crucial role in pollinating plants, which is essential for the production of fruits and seeds."
+        },
+        {
+            fact: "Ant Colonies",
+            description: "Ants live in complex colonies with a division of labor among workers, soldiers, and queens. Some ant species can form supercolonies that span vast areas."
+        },
+        {
+            fact: "Flight",
+            description: "Insects were the first animals to develop flight, and they have evolved a variety of wing structures and flight patterns. Dragonflies are among the fastest flying insects."
+        },
+        {
+            fact: "Camouflage and Mimicry",
+            description: "Many insects have evolved to blend into their surroundings or mimic other organisms as a defense mechanism against predators."
+        },
+        {
+            fact: "Bioluminescence",
+            description: "Some insects, like fireflies, produce light through a chemical reaction in their bodies. This bioluminescence is often used for attracting mates or deterring predators."
+        },
+        {
+            fact: "Survival Adaptations",
+            description: "Insects have adapted to survive in nearly every environment on Earth, from the hottest deserts to the coldest polar regions. Some can even survive extreme conditions, such as the water bear (tardigrade), which can endure radiation and the vacuum of space."
+        }
+    ];
+
+    const factsList = document.getElementById('facts-list');
+
+    facts.forEach(fact => {
+        const listItem = document.createElement('li');
+        const factTitle = document.createElement('h2');
+        const factDescription = document.createElement('p');
+
+        factTitle.textContent = fact.fact;
+        factDescription.textContent = fact.description;
+
+        listItem.appendChild(factTitle);
+        listItem.appendChild(factDescription);
+        factsList.appendChild(listItem);
+    });
+});
